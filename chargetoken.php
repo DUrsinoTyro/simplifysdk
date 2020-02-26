@@ -13,7 +13,7 @@
             'amount' => <?echo $amount?>,
             'token' => <?echo $simplifyToken?>,
             'description' => 'prod description',
-            'currency' => <?echo $currency?>
+            'currency' => 'AUD'
     ));
 
 ?>
