@@ -1,5 +1,8 @@
 
 <?php
+
+    $amount = $_GET["amount"];
+
     require_once("./lib/Simplify.php");
     Simplify::$publicKey = 'sbpb_MzEyMWJkNWItNTg3OS00YmU0LTlmNGItNGRkYzY2OTBlMjhk';
     Simplify::$privateKey = 'JydmDxLjlX3YB+6bLxejH7g2zqU/z2ZSkSxU5GIag+t5YFFQL0ODSXAOkNtXTToq';
