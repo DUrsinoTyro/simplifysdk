@@ -15,7 +15,5 @@
             'description' => 'prod description',
             'currency' => <?echo $currency?>
     ));
-    if ($payment->paymentStatus == 'APPROVED') {
-        echo "Payment approved\n";
-    }
+
 ?>
