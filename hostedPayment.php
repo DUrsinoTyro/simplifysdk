@@ -21,7 +21,10 @@
   $amount = $_GET["amount"];
 	?>
 </head>
-	
+
+<body>
+  <script type="text/javascript"
+          src="https://www.simplify.com/commerce/simplify.pay.js"></script>
 <script>
     SimplifyCommerce.hostedPayments(
         function(response) {
@@ -31,10 +34,6 @@
     ).closeOnCompletion();
 </script>
 	
-	
-<body>
-  <script type="text/javascript"
-          src="https://www.simplify.com/commerce/simplify.pay.js"></script>
   <iframe name="my-hosted-form"
           data-sc-key="sbpb_MzEyMWJkNWItNTg3OS00YmU0LTlmNGItNGRkYzY2OTBlMjhk"
           data-name="Test Transaction"
