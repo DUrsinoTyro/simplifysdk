@@ -4,8 +4,8 @@
     Simplify::$privateKey = 'JydmDxLjlX3YB+6bLxejH7g2zqU/z2ZSkSxU5GIag+t5YFFQL0ODSXAOkNtXTToq';
     $token = $_POST['simplifyToken'];
     $payment = Simplify_Payment::createPayment(array(
-            'amount' => '<?echo $amount?>',
-            'token' => <?echo $token?>,
+            'amount' => $amount,
+            'token' => $token,
             'description' => 'prod description',
             'currency' => 'AUD'
     ));
