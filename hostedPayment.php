@@ -17,7 +17,7 @@
   </style>
 
   <?php
-	$publicKey = getenv('sbpb_MzEyMWJkNWItNTg3OS00YmU0LTlmNGItNGRkYzY2OTBlMjhk');
+	$publicKey = getenv('SIMPLIFY_API_PUBLIC_KEY');
   $amount = $_GET["amount"];
 	?>
 </head>
