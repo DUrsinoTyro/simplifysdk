@@ -21,6 +21,17 @@
   $amount = $_GET["amount"];
 	?>
 </head>
+	
+<script>
+    SimplifyCommerce.hostedPayments(
+        function(response) {
+            console.log(response);
+            // add your custom handler code here
+        }
+    ).closeOnCompletion();
+</script>
+	
+	
 <body>
   <script type="text/javascript"
           src="https://www.simplify.com/commerce/simplify.pay.js"></script>
