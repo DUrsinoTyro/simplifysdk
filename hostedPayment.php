@@ -17,20 +17,32 @@
   </style>
 
   <?php
-	$publicKey = getenv('sbpb_MzEyMWJkNWItNTg3OS00YmU0LTlmNGItNGRkYzY2OTBlMjhk');
+	$publicKey = getenv('SIMPLIFY_API_PUBLIC_KEY');
   $amount = $_GET["amount"];
 	?>
 </head>
 <body>
   <script type="text/javascript"
           src="https://www.simplify.com/commerce/simplify.pay.js"></script>
+  <script>
+    var hostedPayments = SimplifyCommerce.hostedPayments(
+        function(response) {
+            var cardToken = response.cardToken;
+            window.location.href = 'simplify://cardToken?token=' + encodeURIComponent(cardToken);
+            console.log("Redirecting to mobile scheme");
+        },
+        {
+            operation: 'create.token'
+        }
+    );
+  </script>
   <iframe name="my-hosted-form"
           data-sc-key="sbpb_MzEyMWJkNWItNTg3OS00YmU0LTlmNGItNGRkYzY2OTBlMjhk"
           data-name="Test Transaction"
           data-description="Test Checkout"
           data-reference="99999"
           data-amount="<?echo $amount?>"
-          data-color="#1C69E8">
+          data-color="#12B830">
   </iframe>
 </body>
 </html>
