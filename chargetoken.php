@@ -1,6 +1,8 @@
 <?php
        $amount = $_GET["amount"];
-       $token = $_GET["token"];
+       $simplifyToken = $_GET["simplifyToken"];
+       $currency = $_GET["currency"]
+       
 
 
    require_once("./lib/Simplify.php");
@@ -9,9 +11,9 @@
     $token = $_POST['simplifyToken'];
     $payment = Simplify_Payment::createPayment(array(
             'amount' => <?echo $amount?>,
-            'token' => <?echo $token?>,
+            'token' => <?echo $simplifyToken?>,
             'description' => 'prod description',
-            'currency' => 'AUD'
+            'currency' => <?echo $currency?>
     ));
     if ($payment->paymentStatus == 'APPROVED') {
         echo "Payment approved\n";
