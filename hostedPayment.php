@@ -28,11 +28,7 @@
     var hostedPayments = SimplifyCommerce.hostedPayments(
         function(response) {
             var cardToken = response.cardToken;
-            window.location.href = 'simplify://cardToken?token=' + encodeURIComponent(cardToken);
-            console.log("Redirecting to mobile scheme");
-        },
-        {
-            operation: 'create.payment'
+            alert("Payment Approved");
         }
     );
   </script>
