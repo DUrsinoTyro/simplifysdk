@@ -5,7 +5,7 @@
     $token = $_POST['simplifyToken'];
     $payment = Simplify_Payment::createPayment(array(
             'amount' => '<?echo $amount?>',
-            'token' => '<?echo $token?>',
+            'token' => <?echo $token?>,
             'description' => 'prod description',
             'currency' => 'AUD'
     ));
