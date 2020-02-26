@@ -24,14 +24,6 @@
 <body>
   <script type="text/javascript"
           src="https://www.simplify.com/commerce/simplify.pay.js"></script>
-  <script>
-    var hostedPayments = SimplifyCommerce.hostedPayments(
-        function(response) {
-            var cardToken = response.cardToken;
-            alert("Payment Approved");
-        }
-    );
-  </script>
   <iframe name="my-hosted-form"
           data-sc-key="sbpb_MzEyMWJkNWItNTg3OS00YmU0LTlmNGItNGRkYzY2OTBlMjhk"
           data-name="Test Transaction"
