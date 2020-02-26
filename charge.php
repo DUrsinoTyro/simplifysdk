@@ -10,7 +10,7 @@
                 "expYear" => 99,
                 "cvc" => "123"
             ),
-            'amount' => '<?echo $amount?>',
+            'amount' => $amount,
             'description' => 'prod description',
             'currency' => 'AUD'
     ));
