@@ -37,7 +37,7 @@
     );
   </script>
   <iframe name="my-hosted-form"
-          data-sc-key="<?echo $publicKey?>"
+          data-sc-key="sbpb_MzEyMWJkNWItNTg3OS00YmU0LTlmNGItNGRkYzY2OTBlMjhk"
           data-name="Test Transaction"
           data-description="Test Checkout"
           data-reference="99999"
