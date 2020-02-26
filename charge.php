@@ -9,9 +9,9 @@
                 "expYear" => 99,
                 "cvc" => "123"
             ),
-            'amount' => '<?echo $amount?>',
-            'description' => '<?echo $text?>',
-            'currency' => '<?echo $currency?>'
+            'amount' => '1000',
+            'description' => 'prod description',
+            'currency' => 'AUD'
     ));
     if ($payment->paymentStatus == 'APPROVED') {
         echo "Payment approved\n";
