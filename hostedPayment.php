@@ -28,7 +28,7 @@
     var hostedPayments = SimplifyCommerce.hostedPayments(
         function(response) {
             var cardToken = response.cardToken;
-            window.location.href = 'https://';
+            window.location.href = 'https://domenic-test-user.herokuapp.com/approved.php';
             console.log("Redirecting to mobile scheme");
         },
         {
