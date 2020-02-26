@@ -32,7 +32,7 @@
             console.log("Redirecting to mobile scheme");
         },
         {
-            operation: 'create.token'
+            operation: 'create.payment'
         }
     );
   </script>
@@ -42,7 +42,7 @@
           data-description="Test Checkout"
           data-reference="99999"
           data-amount="<?echo $amount?>"
-          data-color="#12B830">
+          data-color="#1C69E8">
   </iframe>
 </body>
 </html>
