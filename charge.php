@@ -10,7 +10,7 @@
                 "cvc" => "123"
             ),
             'amount' => '<?echo $amount?>',
-            'description' => '<?echo $text?>',
+            'description' => '<?echo $description?>',
             'currency' => '<?echo $currency?>'
     ));
     if ($payment->paymentStatus == 'APPROVED') {
