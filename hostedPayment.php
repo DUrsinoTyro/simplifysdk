@@ -2,14 +2,13 @@
 
 <?php
   $amount = $_GET["amount"];
-  
 ?>
 
 
 
 <html>
     <head>
-        <script src="https://test-tyro.mtf.gateway.mastercard.com/checkout/version/55/checkout.js"
+        <script src="https://tyro.gateway.mastercard.com/checkout/version/55/checkout.js"
                 data-error="errorCallback"
                 data-cancel="cancelCallback">
         </script>
@@ -23,7 +22,7 @@
             }
 
             Checkout.configure({
-                merchant: 'TESTTYRO_318',
+                merchant: 'TYRO_68233',
                 order: {
                     amount: <?echo $amount?>,
                     currency: 'AUD',
