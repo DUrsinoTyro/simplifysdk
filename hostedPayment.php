@@ -1,42 +1,49 @@
-    <title>Simplify Hosted Payment</title>
 
-  <style>
-    body {
-      margin: 0;
-    }
-    iframe {
-      display: block;       /* iframes are inline by default */
-      border: none;         /* Reset default border */
-      height: 100vh;        /* Viewport-relative units */
-      width: 100vw;
-    }
-  </style>
 
-  <?php
-    $publicKey = getenv('SIMPLIFY_API_PUBLIC_KEY');
+<?php
   $amount = $_GET["amount"];
-    ?>
-</head>
-<body>
-  <script type="text/javascript"
-          src="https://www.simplify.com/commerce/simplify.pay.js"></script>
+  
+?>
 
-  <script>
-     SimplifyCommerce.hostedPayments(
-        function(response) {
-            console.log(response);
-            // add your custom handler code here
-        }
-    ).closeOnCompletion();
-  </script>
 
-  <iframe name="my-hosted-form"
-          data-sc-key="sbpb_MzEyMWJkNWItNTg3OS00YmU0LTlmNGItNGRkYzY2OTBlMjhk"
-          data-name="Test Transaction"
-          data-description="Test Checkout"
-          data-reference="99999"
-          data-amount="<?echo $amount?>"
-          data-color="#12B830">
-  </iframe>
-</body>
+
+<html>
+    <head>
+        <script src="https://test-tyro.mtf.gateway.mastercard.com/checkout/version/55/checkout.js"
+                data-error="errorCallback"
+                data-cancel="cancelCallback">
+        </script>
+
+        <script type="text/javascript">
+            function errorCallback(error) {
+                  console.log(JSON.stringify(error));
+            }
+            function cancelCallback() {
+                  console.log('Payment cancelled');
+            }
+
+            Checkout.configure({
+                merchant: 'TESTTYRO_318',
+                order: {
+                    amount: <?echo $amount?>,
+                    currency: 'AUD',
+                    description: 'Ordered goods',
+                   id: Date.now()
+                },
+                interaction: {
+                    operation: 'PURCHASE', // set this field to 'PURCHASE' for Hosted Checkout to perform a Pay Operation.
+                    merchant: {
+                        name: 'Your merchant name',
+                        address: {
+                            line1: '200 Sample St',
+                            line2: '1234 Example Town'            
+                        }    
+                    }
+                                                                }
+            });
+        </script>
+    </head>
+    <body onload="Checkout.showLightbox();">
+        
+    </body>
 </html>
