@@ -1,11 +1,3 @@
-
-
-<?php
-  $amount = $_GET["amount"];
-?>
-
-
-
 <html>
     <head>
         <script src="https://tyro.gateway.mastercard.com/checkout/version/55/checkout.js"
