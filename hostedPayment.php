@@ -1,6 +1,6 @@
 <html>
     <head>
-        <script src="https://tyro.gateway.mastercard.com/checkout/version/55/checkout.js"
+        <script src="https://tyro.gateway.mastercard.com/checkout/version/54/checkout.js"
                 data-error="errorCallback"
                 data-cancel="cancelCallback">
         </script>
