@@ -16,7 +16,7 @@
             Checkout.configure({
                 merchant: 'TYRO_68233',
                 order: {
-                    amount: 1,
+                    amount: 0.01,
                     currency: 'AUD',
                     description: 'Ordered goods',
                    id: Date.now()
