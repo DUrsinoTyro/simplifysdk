@@ -34,7 +34,7 @@
             });
         </script>
     </head>
-    <body onload="Checkout.showLightbox();">
+    <body onload="Checkout.showPaymentPage();">
         
     </body>
 </html>
